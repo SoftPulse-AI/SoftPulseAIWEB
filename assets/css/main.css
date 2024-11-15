@@ -1325,7 +1325,16 @@ section,
 }
 
 .features-cards .feature-box.red i {
-  color: #f28484;
+  color: #fd2424;
+}
+.features-cards .feature-box.pink
+ {
+  background-color: #deacac;
+}
+
+.features-cards .feature-box.pink
+ i {
+  color: #d23d3d;
 }
 
 /*--------------------------------------------------------------
