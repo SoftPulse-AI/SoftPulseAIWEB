@@ -33,18 +33,20 @@
 
 <body class="service-details-page">
 
+
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">iLanding</h1>
+        <img src="assets/img/logo.png" alt="">
+        <!-- <h1 class="sitename">iLanding</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#services">Services</a></li>
@@ -52,7 +54,8 @@
           <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="#">Deep Dropdown 1</a></li>
                   <li><a href="#">Deep Dropdown 2</a></li>
@@ -93,146 +96,235 @@
 
     <!-- Service Details Section -->
     <section id="service-details" class="service-details section">
-
       <div class="container">
-
         <div class="row gy-5">
-
+          
+          <!-- Left Sidebar (Service List) -->
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-
             <div class="service-box">
-              <h4>Serices List</h4>
+              <h4>Our Services</h4>
               <div class="services-list">
-                <a href="#" class="active"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Product Management</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Graphic Design</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Marketing</span></a>
+                <a href="#" class="active" onclick="changeService('crmSolutions')"><i class="bi bi-arrow-right-circle"></i><span>CRM Solutions</span></a>
+                <a href="#" onclick="changeService('webDevelopment')"><i class="bi bi-arrow-right-circle"></i><span>Web Development</span></a>
+                <a href="#" onclick="changeService('appDevelopment')"><i class="bi bi-arrow-right-circle"></i><span>App Development</span></a>
+                <a href="#" onclick="changeService('aiSolutions')"><i class="bi bi-arrow-right-circle"></i><span>AI Solutions</span></a>
+                <a href="#" onclick="changeService('trademarkServices')"><i class="bi bi-arrow-right-circle"></i><span>Trademark Services</span></a>
+                <a href="#" onclick="changeService('customSoftware')"><i class="bi bi-arrow-right-circle"></i><span>Custom Software</span></a>
+                <a href="#" onclick="changeService('printingMedia')"><i class="bi bi-arrow-right-circle"></i><span>Printing Media</span></a>
+                <a href="#" onclick="changeService('digitalMarketing')"><i class="bi bi-arrow-right-circle"></i><span>Digital Marketing</span></a>
               </div>
             </div><!-- End Services List -->
-
+    
             <div class="service-box">
               <h4>Download Catalog</h4>
               <div class="download-catalog">
-                <a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
-                <a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
+                <a href="#"><i class="bi bi-filetype-pdf"></i><span>Service Catalog PDF</span></a>
+                <a href="#"><i class="bi bi-file-earmark-word"></i><span>Service Catalog DOC</span></a>
               </div>
-            </div><!-- End Services List -->
-
+            </div><!-- End Download Catalog -->
+    
             <div class="help-box d-flex flex-column justify-content-center align-items-center">
               <i class="bi bi-headset help-icon"></i>
               <h4>Have a Question?</h4>
               <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i> <span>+1 5589 55488 55</span></p>
-              <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a href="mailto:contact@example.com">contact@example.com</a></p>
-            </div>
-
-          </div>
-
+              <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a href="mailto:contact@softpulseai.com">contact@softpulseai.com</a></p>
+            </div><!-- End Help Box -->
+    
+          </div><!-- End Left Sidebar -->
+    
+          <!-- Right Content (Service Details Card) -->
           <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-            <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
-            <p>
-              Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+            <img id="serviceImage" src="assets/img/services.jpg" alt="SoftpulseAI Services" class="img-fluid services-img">
+            <h3 id="serviceTitle">CRM Solutions and More: Tailored Solutions for Every Business</h3>
+            <p id="serviceDescription">
+              At SoftpulseAI, we offer cutting-edge CRM solutions designed to enhance customer relationships, streamline sales processes, and provide deep insights into your business’s performance. Our CRM systems integrate seamlessly with other platforms and are customizable to meet the unique needs of your business.
             </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+            <ul id="serviceFeatures">
+              <li><i class="bi bi-check-circle"></i> <span>Customized CRM solutions tailored to your business goals</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Seamless integration with marketing, sales, and service tools</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Analytics and reporting for better decision-making</span></li>
             </ul>
-            <p>
-              Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+            <p id="serviceDetails">
+              Our CRM solutions provide automated workflows, data tracking, and enhanced communication tools to help you manage leads, customer interactions, and sales. Improve customer retention and boost your sales team’s efficiency with a CRM that’s easy to use and provides all the insights you need for growth.
             </p>
-            <p>
-              Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
+          </div><!-- End Right Content -->
+    
+        </div><!-- End Row -->
+      </div><!-- End Container -->
     </section><!-- /Service Details Section -->
-
+    
+    <script>
+      function changeService(serviceType) {
+        let title = '';
+        let description = '';
+        let features = '';
+        let image = '';
+    
+        // Define content for each service type with SEO optimization
+        switch(serviceType) {
+          case 'crmSolutions':
+            title = 'CRM Solutions';
+            description = 'SoftpulseAI’s CRM solutions are designed to revolutionize the way your business interacts with customers. By integrating all customer-related processes into a single platform, we help you manage leads, sales, and customer support seamlessly. Our CRM systems are highly customizable to fit the unique needs of your business, and we provide real-time data tracking and powerful analytics tools to optimize your marketing and sales efforts. With our user-friendly CRM, your team will be more productive, your customers will receive personalized attention, and your bottom line will see significant growth.';
+            features = `
+              <li><i class="bi bi-check-circle"></i> <span>Fully customizable CRM tailored to your specific business model</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Real-time reporting and analytics to help your team make data-driven decisions</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Automated lead generation, tracking, and nurturing features</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Integration with other essential business tools and platforms</span></li>`;
+            image = 'assets/img/crm-solutions.jpg';
+            break;
+          case 'webDevelopment':
+            title = 'Web Development';
+            description = 'At SoftpulseAI, we specialize in building high-performance websites that not only look great but also function seamlessly. Our web development services are focused on delivering responsive, mobile-friendly, and SEO-optimized websites that provide an exceptional user experience. We build custom websites that cater to your specific business needs, whether it’s a simple informational site or a complex e-commerce platform. We incorporate the latest technologies and web design trends to ensure your website is fast, secure, and scalable. Our goal is to help you engage visitors, convert leads, and enhance your online visibility through a user-centered design that aligns with your brand.';
+            features = `
+              <li><i class="bi bi-check-circle"></i> <span>Responsive web design to enhance user experience across all devices</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>SEO-friendly structure to improve search engine ranking</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Fast, secure, and scalable website solutions</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Custom-built platforms tailored to your business goals</span></li>`;
+            image = 'assets/img/web-development.jpg';
+            break;
+          case 'appDevelopment':
+            title = 'App Development';
+            description = 'Our app development services provide businesses with custom mobile applications for iOS and Android platforms. Whether you are looking to develop a new mobile app or improve an existing one, SoftpulseAI delivers high-quality, secure, and scalable solutions. We focus on delivering a seamless user experience with apps that are intuitive, fast, and capable of integrating with your existing business tools. From e-commerce applications to enterprise-level solutions, our apps are designed to engage your customers, increase revenue, and enhance operational efficiency.';
+            features = `
+              <li><i class="bi bi-check-circle"></i> <span>Native and cross-platform apps for Android and iOS</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>High-level security features to protect user data</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Customizable features to fit your business requirements</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Seamless integration with third-party tools and APIs</span></li>`;
+            image = 'assets/img/app-development.jpg';
+            break;
+          case 'aiSolutions':
+            title = 'AI Solutions';
+            description = 'Artificial Intelligence (AI) is transforming industries across the globe, and SoftpulseAI helps businesses harness the power of AI to automate processes, optimize decision-making, and enhance customer experiences. Our AI solutions include machine learning algorithms, natural language processing, and data analysis tools that empower your business to make better decisions, predict trends, and provide more personalized services to customers. We develop AI solutions that integrate seamlessly with your existing systems and are designed to scale as your business grows.';
+            features = `
+              <li><i class="bi bi-check-circle"></i> <span>Custom AI solutions that cater to your specific business needs</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Advanced data analysis and machine learning capabilities</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Scalable solutions that grow with your business</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Improved customer experience through intelligent automation</span></li>`;
+            image = 'assets/img/ai-solutions.jpg';
+            break;
+          case 'trademarkServices':
+            title = 'Trademark Services';
+            description = 'SoftpulseAI offers comprehensive trademark services to help protect your brand identity. We provide expert assistance in trademark registration, searching for potential conflicts, and ensuring your intellectual property is legally safeguarded. With our trademark services, your business can avoid costly legal issues and secure the exclusive rights to your brand name, logo, and slogan. Whether you are a startup or an established enterprise, we help you navigate the complex trademark process with ease, ensuring your brand is protected on a global scale.';
+            features = `
+              <li><i class="bi bi-check-circle"></i> <span>Expert trademark registration and filing services</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Comprehensive trademark search and conflict resolution</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Global protection for your brand and intellectual property</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Ongoing trademark monitoring and enforcement</span></li>`;
+            image = 'assets/img/trademark-services.jpg';
+            break;
+          case 'customSoftware':
+            title = 'Custom Software Solutions';
+            description = 'SoftpulseAI offers high-performance, custom-built software solutions that are designed to meet your unique business needs. We specialize in developing scalable applications that grow with your business. Our software development team works closely with you to create solutions that are tailored to your workflow, ensuring that you receive a product that improves efficiency, streamlines operations, and enhances your business performance. We focus on delivering secure and robust applications, ensuring high performance, reliability, and usability at every stage of the development process.';
+            features = `
+              <li><i class="bi bi-check-circle"></i> <span>Custom-built software designed specifically for your business needs</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Scalable and flexible applications that grow with your business</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>High-security standards to protect your business data</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Robust performance and intuitive design</span></li>`;
+            image = 'assets/img/custom-software.jpg';
+            break;
+          case 'printingMedia':
+            title = 'Printing Media';
+            description = 'SoftpulseAI offers professional printing media services to enhance your brand’s physical presence. Whether you need business cards, brochures, posters, or large-format prints, our high-quality printing services deliver exceptional results that make a lasting impression. We understand the importance of brand consistency, which is why we ensure that your print materials align perfectly with your digital presence. Our team works with you from design to final print, ensuring fast turnaround times and top-quality materials every time.';
+            features = `
+              <li><i class="bi bi-check-circle"></i> <span>High-quality print materials that align with your brand</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Custom designs that reflect your brand’s identity</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Quick turnaround and reliable delivery</span></li>`;
+            image = 'assets/img/printing-media.jpg';
+            break;
+          case 'digitalMarketing':
+            title = 'Digital Marketing';
+            description = 'In the digital age, marketing is no longer just about reaching your audience – it’s about engaging them where they are. SoftpulseAI provides comprehensive digital marketing services that include SEO, PPC advertising, content creation, and social media marketing. We help businesses increase their visibility online, drive more traffic to their websites, and improve conversion rates. Whether you’re looking to enhance your search engine ranking, reach new customers on social media, or create compelling content, our digital marketing experts are here to help you succeed.';
+            features = `
+              <li><i class="bi bi-check-circle"></i> <span>Expert SEO strategies to increase organic search rankings</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Targeted social media marketing to grow your brand presence</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Data-driven content marketing strategies</span></li>`;
+            image = 'assets/img/digital-marketing.jpg';
+            break;
+        }
+    
+        // Update the page with new content
+        document.getElementById('serviceTitle').innerText = title;
+        document.getElementById('serviceDescription').innerText = description;
+        document.getElementById('serviceFeatures').innerHTML = features;
+        document.getElementById('serviceImage').src = image;
+      }
+    </script>
+    
   </main>
-
   <footer id="footer" class="footer">
 
     <div class="container footer-top">
       <div class="row gy-4">
+        
+        <!-- About Section -->
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">iLanding</span>
+            <img src="assets/img/logo.png" alt="SoftPulseAI Logo">
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>Sector 62 Noida</p>
+            <p>Uttar Pardesh 201309</p>
+            <p class="mt-3"><strong>Phone:</strong> <span><a href="tel:+919289425934">+91 92894 25934</a></span></p>
+            <p><strong>Email:</strong> <span><a href="mailto:Softpulseai@gmail.com">Softpulseai@gmail.com</a></span></p>
           </div>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-
+  
+        <!-- Useful Links -->
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
-
+  
+        <!-- Our Services -->
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
             <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">App Development</a></li>
+            <li><a href="#">AI Solutions</a></li>
+            <li><a href="#">Digital Marketing</a></li>
+            <li><a href="#">CRM Solutions</a></li>
           </ul>
         </div>
-
+  
+        <!-- Additional Solutions -->
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Hic solutasetp</h4>
+          <h4>Solutions</h4>
           <ul>
-            <li><a href="#">Molestiae accusamus iure</a></li>
-            <li><a href="#">Excepturi dignissimos</a></li>
-            <li><a href="#">Suscipit distinctio</a></li>
-            <li><a href="#">Dilecta</a></li>
-            <li><a href="#">Sit quas consectetur</a></li>
+            <li><a href="#">Custom Software</a></li>
+            <li><a href="#">E-commerce Solutions</a></li>
+            <li><a href="#">Trademark Services</a></li>
+            <li><a href="#">Printing Services</a></li>
+            <li><a href="#">Business Automation</a></li>
           </ul>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Nobis illum</h4>
-          <ul>
-            <li><a href="#">Ipsam</a></li>
-            <li><a href="#">Laudantium dolorum</a></li>
-            <li><a href="#">Dinera</a></li>
-            <li><a href="#">Trodelas</a></li>
-            <li><a href="#">Flexo</a></li>
-          </ul>
-        </div>
-
+  
       </div>
     </div>
-
+  
+    <!-- Footer Bottom Section -->
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">iLanding</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">SoftPulseAI</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-      
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://SoftPulseAI.in/">SoftPulseAI</a>
       </div>
     </div>
-
+  
   </footer>
+  
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
