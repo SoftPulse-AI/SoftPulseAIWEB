@@ -2347,3 +2347,22 @@ section,
   pointer-events: none; /* Makes sure the dot doesn't interfere with clicks */
   transition: transform 0.05s ease; /* Smooth movement */
 }
+
+.active-tab {
+  color: #fff; /* White text color */
+  background-color: #007bff; /* Blue background for active tab */
+  font-weight: bold; /* Optional: Make the text bold */
+}
+
+#serviceImage {
+  width: 100%; /* Make sure it takes full width of the container */
+  max-width: 800px; /* Set a max width for the image */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+  border-radius: 8px; /* Optional: Add rounded corners for a smoother look */
+}
+
+#serviceImage:hover {
+  transform: scale(1.05) rotateX(5deg) rotateY(5deg); /* Scale up and add 3D rotation */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Add a shadow to give the 3D feel */
+}
