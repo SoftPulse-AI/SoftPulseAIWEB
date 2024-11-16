@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+    <loc>https://www.softpulseai.in/</loc>
+    <lastmod>2024-11-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+</url>
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://www.softpulseai.in/index.html#hero</loc>
+        <lastmod>2024-11-14</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.00</priority>
+    </url>
+
+    <!-- About Page -->
+    <url>
+        <loc>https://www.softpulseai.in/index.html#about</loc>
+        <lastmod>2024-11-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- Contact Page -->
+    <url>
+        <loc>https://www.softpulseai.in/index.html#contact</loc>
+        <lastmod>2024-11-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- Services Section (Anchor Link) -->
+    <url>
+        <loc>https://www.softpulseai.in/#services</loc>
+        <lastmod>2024-11-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- Service Details Page -->
+    <url>
+        <loc>https://www.softpulseai.in/service-details.html</loc>
+        <lastmod>2024-11-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- About Section (Anchor Link) -->
+    <url>
+        <loc>https://www.softpulseai.in/#about</loc>
+        <lastmod>2024-11-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- Contact Section (Anchor Link) -->
+    <url>
+        <loc>https://www.softpulseai.in/#contact</loc>
+        <lastmod>2024-11-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- Services Section (Anchor Link) Again for Better Coverage -->
+    <url>
+        <loc>https://www.softpulseai.in/#services</loc>
+        <lastmod>2024-11-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+</urlset>
