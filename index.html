@@ -118,6 +118,208 @@
 
 
   <main class="main">
+<!-- Dark Background Overlay -->
+<div id="popup-overlay" class="popup-overlay"></div>
+
+<!-- Popup Contact Form Modal -->
+<div id="popup-form" class="popup-container">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closePopupForm()">&times;</span>
+    <h3>Get in Touch with SoftPulseAI</h3>
+    <p>We’d love to hear from you. Whether you have a question about our services or need support, please fill out the form below.</p>
+
+    <form id="popup-contact-form" method="POST" action="https://script.google.com/macros/s/AKfycbyPBOERk2yqnt5MihmGQV9n911QyO1rX_vkwrXaMxBBcDVZgrKiQ1DhBlNoZNG_dQRGjw/exec">
+      <div class="row gy-4">
+        <div class="col-md-6">
+          <label for="popup-name" class="form-label">Your Name</label>
+          <input type="text" name="name" id="popup-name" class="form-control" placeholder="Your Name" required>
+        </div>
+
+        <div class="col-md-6">
+          <label for="popup-email" class="form-label">Your Email</label>
+          <input type="email" class="form-control" name="email" id="popup-email" placeholder="Your Email" required>
+        </div>
+
+        <div class="col-12">
+          <label for="popup-number" class="form-label">Phone Number</label>
+          <input type="number" class="form-control" name="Number" id="popup-number" placeholder="Phone Number" required>
+        </div>
+
+        <div class="col-12">
+          <label for="popup-message" class="form-label">Message</label>
+          <textarea class="form-control" name="message" id="popup-message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div id="success-modal" class="success-container">
+  <div class="success-content">
+    <span class="success-close" onclick="closeSuccessModal()">&times;</span>
+    <h3>Message Sent Successfully!</h3>
+    <p>Thank you for reaching out. We will get back to you soon.</p>
+  </div>
+</div>
+
+<style>
+  /* Background Blur Effect */
+  .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  /* 3D Popup Form */
+  .popup-container, .success-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: linear-gradient(135deg, #ffffff, #e6f7ff);
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), inset 0 3px 10px rgba(255, 255, 255, 0.3);
+    z-index: 1001;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Success Modal Styling */
+  .success-container {
+    background: #e1ffe1;
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+  }
+
+  .success-content {
+    text-align: center;
+  }
+
+  /* Close Buttons */
+  .popup-close, .success-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #ff4d4d;
+    transition: 0.2s ease-in-out;
+  }
+
+  .popup-close:hover, .success-close:hover {
+    color: red;
+    transform: scale(1.2);
+  }
+
+  /* Input Fields */
+  .popup-container input, .popup-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.2s ease-in-out;
+  }
+
+  .popup-container input:focus, .popup-container textarea:focus {
+    background: #fff;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Submit Button */
+  .popup-container .btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .popup-container .btn:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: translateY(-2px);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+      document.getElementById("popup-overlay").style.display = "block";
+      document.getElementById("popup-form").style.display = "block";
+
+      setTimeout(() => {
+        document.getElementById("popup-overlay").style.opacity = "1";
+        document.getElementById("popup-form").style.opacity = "1";
+        document.getElementById("popup-form").style.transform = "translate(-50%, -50%) scale(1)";
+      }, 10);
+    }, 10000); // Show popup after 10 seconds
+  });
+
+  function closePopupForm() {
+    document.getElementById("popup-overlay").style.opacity = "0";
+    document.getElementById("popup-form").style.opacity = "0";
+    document.getElementById("popup-form").style.transform = "translate(-50%, -50%) scale(0.8)";
+
+    setTimeout(() => {
+      document.getElementById("popup-overlay").style.display = "none";
+      document.getElementById("popup-form").style.display = "none";
+    }, 300);
+  }
+
+  function closeSuccessModal() {
+    document.getElementById("success-modal").style.opacity = "0";
+    document.getElementById("success-modal").style.transform = "translate(-50%, -50%) scale(0.8)";
+
+    setTimeout(() => {
+      document.getElementById("success-modal").style.display = "none";
+    }, 300);
+  }
+
+  document.getElementById("popup-contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    fetch(this.action, {
+      method: "POST",
+      body: formData
+    }).then(response => {
+      if (response.ok) {
+        closePopupForm();
+        setTimeout(() => {
+          document.getElementById("success-modal").style.display = "block";
+          setTimeout(() => {
+            document.getElementById("success-modal").style.opacity = "1";
+            document.getElementById("success-modal").style.transform = "translate(-50%, -50%) scale(1)";
+          }, 10);
+        }, 300);
+        this.reset();
+      } else {
+        alert("Error submitting form. Please try again.");
+      }
+    }).catch(error => alert("Network error. Try again later."));
+  });
+</script>
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
