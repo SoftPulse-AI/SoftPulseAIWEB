@@ -1,6 +1,24 @@
+# Block specific directories from being indexed
 User-agent: *
 Disallow: /admin/
 Disallow: /login/
+Disallow: /private/
+Disallow: /checkout/
+Disallow: /cart/
+
+# Allow the sitemap to be crawled
 Allow: /sitemap.xml
 
+# Allow public content to be indexed (if applicable)
+Allow: /public/
+
+# Specific files or directories you want indexed can be explicitly allowed here
+Allow: /about.html
+Allow: /services.html
+Allow: /portfolio.html
+Allow: /contact.html
+Allow: /index.html
+Allow: /404.html
+
+# Sitemap location
 Sitemap: https://www.softpulseai.in/sitemap.xml

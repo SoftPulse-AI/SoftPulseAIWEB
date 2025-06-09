@@ -4,7 +4,7 @@
   <!-- Home Page -->
   <url>
     <loc>https://www.softpulseai.in/index.html</loc>
-    <lastmod>2025-05-26</lastmod>
+    <lastmod>2025-06-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
@@ -12,33 +12,41 @@
   <!-- About Page -->
   <url>
     <loc>https://www.softpulseai.in/about.html</loc>
-    <lastmod>2025-05-26</lastmod>
+    <lastmod>2025-06-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
 
   <!-- Services Page -->
   <url>
     <loc>https://www.softpulseai.in/services.html</loc>
-    <lastmod>2025-05-26</lastmod>
+    <lastmod>2025-06-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
   </url>
 
   <!-- Portfolio Page -->
   <url>
     <loc>https://www.softpulseai.in/portfolio.html</loc>
-    <lastmod>2025-05-26</lastmod>
+    <lastmod>2025-06-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
 
   <!-- Contact Page -->
   <url>
     <loc>https://www.softpulseai.in/contact.html</loc>
-    <lastmod>2025-05-26</lastmod>
+    <lastmod>2025-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+
+  <!-- 404 Error Page -->
+  <url>
+    <loc>https://www.softpulseai.in/404.html</loc>
+    <lastmod>2025-06-09</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.10</priority>
   </url>
 
 </urlset>
